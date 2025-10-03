@@ -1,17 +1,17 @@
 # Unity-Game-Development
-”Rick’s Goal” is an infinite 3D runner game built in Unity 2022.3 LTS, inspired by the frantic style of the Subway Surfer mechanics. The game includes a controller for Rick, to move levels around obstacles while keeping score for each mile traveled in the game.
 
 Link for the Game Demo : https://drive.google.com/drive/folders/1inU0-PtNH7UIgSyBd6ppX6ckSa__JbDT
 
 
-1 Introduction
+# Introduction
 ”Rick’s Goal” is an infinite 3D runner game built in Unity 2022.3 LTS, inspired by the
 frantic style of the Subway Surfer mechanics. The game includes a controller for Rick,
 to move levels around obstacles while keeping score for each mile traveled in the game.
 This paper covers the experience of having the core gameplay elements of physics-based
 motion, collision response, scoring, and the progression of different levels implemented
 utilizing Animation and Unity scripting capabilities.
-2 Tools and Technologies
+
+# Tools and Technologies
 The game was developed primarily in Unity 2022.3 LTS for the development platform.
 C# was utilized for modeling the scripting functionality of the game utilizing Unity’s
 
@@ -25,7 +25,10 @@ mentioned tools and technologies afforded the ability integrate the gameplay mec
 
 of the game, the UI components, and the level change progression system as part of the
 final outcome.
-3 Game Architecture
+
+
+# Game Architecture
+
 
 The game architecture uses connected scripts that each fulfill separate roles. Player-
 Movement.cs governs physics-driven movement through forces applied to the player’s
@@ -36,7 +39,9 @@ Z-position and displays them in real-time via TextMeshPro; Collision detection i
 focus of PlayerCollision.cs to halt movement and trigger game over when contacting an
 obstacle; there is an EndTrigger.cs that detects level change, and FollowPlayer.cs that
 controls the camera to track the player with fixed positional offsets.
-4 Core Mechanics Implementation
+
+# Core Mechanics Implementation
+
 4.1 Player Movement
 The player is moved with Unity’s Rigidbody. A constant forward force of 2000f moves the
 player automatically, while the players movement laterally using 500f forces in response
@@ -73,14 +78,14 @@ The FollowPlayer.cs script performs the camera following functionality. The scri
 dates the camera’s position to match the player’s position plus a fixed offset to maintain
 
 a third-person perspective that is consistent throughout gameplay.
-5 UI Scene Management
+# UI Scene Management
 The Menu.cs script handles main menu navigation, using “SceneManager.LoadScene()”
 
 to start the game. During gameplay, the score UI updates dynamically, while the level-
 complete UI panel is activated via the GameManager. Scene transitions are managed
 
 through Unity’s build settings, ensuring proper indexing of levels.
-6 Conclusion
+# Conclusion
 The project “Rick’s Goal” is a proper example of using Unity’s physics engine, C scripting,
 and UI systems to create a working endless runner. The key developments are responsive
 controls, solid collision detection, and dynamic scoring. And the modular code base will
